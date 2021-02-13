@@ -19,13 +19,13 @@ while 1:
 	print('D - Скачать видео')
 	print('Q - Выход')
 	print('-' * 50)
-	action = input(': ')
+	action = input(': ').lower()
 
-	if action.lower() == 'q':
+	if action == 'q':
 		print('\nБыл рад с тобой поработать!')
 		break
 
-	elif action.lower() in 'id':
+	elif action in set('id'):
 		print(actions[action]())
 
 	else:
