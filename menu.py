@@ -2,6 +2,9 @@ from pytube import YouTube
 from get_data import getData
 from download_video import videoDownloader
 
+# Добавить возможность выбрать путь, куда грузить видео
+# Улучшить оформление (сделать поаакуратнее)
+# Почистить код
 
 print('Привет! Я - загрузчик видео с платформы YouTube.')
 print('-' * 50)
