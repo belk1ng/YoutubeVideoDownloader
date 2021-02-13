@@ -10,7 +10,7 @@ def videoDownloader():
 	    print(f'{i}. {samples[i]}')
 
 	downloadNum = int(input('Введите номер видео, которое хотите скачать: '))
-	samples[downloadNum].download('/home/dmitry/passwordManager')
+	samples[downloadNum].download('/home/dmitry/prog/YoutubeDownloader/videos')
 
 	return
 	
