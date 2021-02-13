@@ -8,6 +8,6 @@ A program for downloading videos from the YouTube platform. To get started, you 
 
 For the program to work:
 ```
-  pip install pytube - Windows
-  pip3 install pytube - Linux
+pip install pytube - Windows
+pip3 install pytube - Linux
 ```
