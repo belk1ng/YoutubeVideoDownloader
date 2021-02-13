@@ -2,7 +2,6 @@ from pytube import YouTube
 from check_url import correctUrl
 
 
-
 def videoDownloader():
 	video = correctUrl()
 	if not video:
