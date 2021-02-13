@@ -2,7 +2,6 @@ from pytube import YouTube
 from get_data import getData
 from download_video import videoDownloader
 
-# Добавить проверку введённого url адреса на корректность
 
 print('Привет! Я - загрузчик видео с платформы YouTube.')
 
