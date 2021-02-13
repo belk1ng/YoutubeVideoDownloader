@@ -1,10 +1,25 @@
 from pytube import YouTube
+from check_url import correctUrl
 
 
 def getData():
-	url = input('\nВведите url-адрес видео, информацию о котором хотите получить: ')
-	video = YouTube(url)
+	video = correctUrl()
+	if not video:
+		return 'Действие было отменено'
+
+	print('\nИнормация о видео:')
+	print('-' * 50)
+	print(f'Канал - {video.author}')
+	print('-' * 50)
+	print(f'Описание - {video.description}')
+	print('-' * 50)
+	print(f'Продолжительность видео - {video.length // 60}min {video.length % 60}sec')
+	print('-' * 50)
+	print(f'Дата публикации - {video.publish_date}')
+	print('-' * 50)
+	print(f'Просмотры - {video.views}')
+	print('-' * 50)
+	print(f'Рейтинг - {video.rating}')
+	print('-' * 50)
 	
-	return f'\nИнормация о видео:\nАвтор - {video.author}\n\
-Описание - {video.description}\nПродолжительность видео - {video.length} секунды\n\
-Дата публикации - {video.publish_date}\nПросмотры - {video.views}\nРейтинг - {video.rating}'
+	return 'Информация успешно предоставлена!'

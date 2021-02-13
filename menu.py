@@ -2,17 +2,9 @@ from pytube import YouTube
 from get_data import getData
 from download_video import videoDownloader
 
-# Добавить возможность выбрать путь, куда грузить видео
-# Улучшить оформление (сделать поаакуратнее)
-# Почистить код
+# Добавить проверку введённого url адреса на корректность
 
 print('Привет! Я - загрузчик видео с платформы YouTube.')
-print('-' * 50)
-print('Выбери действие: ')
-print('I - Получить информацию о видео')
-print('D - Скачать видео')
-print('Q - Выход')
-print('-' * 50)
 
 actions = {
 	'i': getData,
@@ -20,14 +12,21 @@ actions = {
 }
 
 while 1:
+	print()
+	print('-' * 50)
+	print('Выбери действие: ')
+	print('I - Получить информацию о видео')
+	print('D - Скачать видео')
+	print('Q - Выход')
+	print('-' * 50)
 	action = input(': ')
 
 	if action.lower() == 'q':
-		print('Был рад с тобой поработать!')
+		print('\nБыл рад с тобой поработать!')
 		break
 
-	elif action in 'id':
+	elif action.lower() in 'id':
 		print(actions[action]())
 
 	else:
-		print('\nВыбери верный пункт из меню!')
+		print('\nВыбери верный пункт из меню!\n')
